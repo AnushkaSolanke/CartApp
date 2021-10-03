@@ -1,0 +1,27 @@
+.header {
+    padding: 3px;
+    text-align: center;
+    background: #063FC0;
+    color: white;
+    font-size: 30px;
+  }
+
+
+.Add-Retailer table{
+    width:60%
+}  
+
+.table-1{
+    width:50%
+}
+
+
+.table-1 td{
+    width:15%;
+    line-height: 60px;
+  
+}
+
+td{
+    width:60%
+}

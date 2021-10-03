@@ -1,0 +1,53 @@
+
+<div class="Login-Page">
+   
+    <div class="Login-Left Login-LR">
+      <img src="assets/logo.jpeg">
+    </div>
+  
+  
+    <div class="Login-Right Login-LR">
+  
+      <div style="display: flex;justify-content: space-between;">
+        <div class="User User-User" ><span style="margin-right: 0.5rem;"><i class="fa fa-shopping-bag" aria-hidden="true"></i></span>User</div>
+        <div class="User User-Admin" ><span style="margin-right: 0.5rem;"><i class="fa fa-lock" aria-hidden="true"></i></span>Admin</div>
+        <div class="User User-Retailer"><span style="margin-right: 0.5rem;"><i class="fa fa-truck" aria-hidden="true"></i></span>Retailer</div>
+      </div>
+    <select [(ngModel)]="selected">
+        <option value="User">User</option>
+        <option value="Admin">Admin</option>
+        <option value="Retailer">Retailer</option>  
+    </select>
+
+    <button class="btn btn-info" (click)="Login123()">Login NOW</button> 
+         
+    
+     <!-- <form #loginform="ngForm" (ngSubmit)=login(loginform) novalidate >
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          </div>
+  
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div>
+          </div>
+  
+          <br>
+  
+          <button type="submit" class="btn btn-primary" >Login</button>
+        
+        
+        
+        <br>
+        
+        <a href="url">Reset Password</a><br><br>
+        <h6>new user? SignUp</h6>
+        <button type="button" class="btn btn-success" routerLink="signup">SignUp</button>
+  
+      
+  
+    </form>
+  </div> -->

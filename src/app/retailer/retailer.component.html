@@ -1,0 +1,72 @@
+<div class="header">
+    <h1>ADD PRODUCT</h1>
+</div>
+
+<form #prodForm="ngForm" (ngSubmit)=addProduct(prodForm)>
+<table class="table-1" align="center">
+    <tr>
+        <td><label for="#">Category</label></td>
+        <td>
+            <select name="Category" id="#" class="form-control">
+                <option selected="selected" value="Mobile">Mobile</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Electronics">Electronics</option>
+            </select>
+    
+
+        </td>
+    </tr>
+    <tr>
+        <td><label for="prodid">Prod ID </label></td>
+        <td> <input type="text"  class="form-control" name="prodid" ngModel required></td> 
+    </tr>
+        <tr>
+        <td><label for="#">Sub Category</label></td>       
+        <td><input type="text" class="form-control" ngModel required></td> 
+        </tr>
+        <tr>
+            <td><label>Product name</label></td>
+            <td><input type="text" class="form-control" ngModel required></td>
+            </tr>
+   
+    <tr>
+        <td><label for="brand"> Brand</label></td>
+        <td>
+            <input type="text" class="form-control" name="brand" ngModel required>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="model"> Model</label></td>
+        <td><input type="text" class="form-control"  name="model" ngModel required></td>
+    </tr>
+    <tr>
+        <td><label for="price">  Price</label></td>
+        <td>
+            <input type="text" class="form-control" name="price" ngModel required>
+        </td>
+        </tr>
+        <tr>
+        <td><label for="stock">  Stock</label></td>
+        <td><input type="number" class="form-control" name="stock" ngModel required></td>
+    </tr>
+    <tr>
+        <td><label for="proddesc">  Product description</label></td>
+        <td><textarea class="form-control" rows="3" name="proddesc" ngModel required></textarea></td>
+        </tr>
+        <!--<tr> <td> <label for="upload">  Upload Product Image  </label> </td> 
+            <input type="file" class="custom-file-input" id="customFile" name="upload" ngModel required>
+           <label class="custom-file-label" for="customFile"></label>
+          </tr> -->
+          <tr>
+             <td> <label for="uploadimg">Upload Image</label> </td>
+              <td>
+                <input type="text" class="form-control" name="uploadimg" ngModel required>
+            </td>
+          </tr>
+          <br>
+          <div class="col text-left">
+        <button type="submit" class="btn btn-primary" >ADD PRODUCT</button>
+        </div>
+        </table>
+        
+    </form>

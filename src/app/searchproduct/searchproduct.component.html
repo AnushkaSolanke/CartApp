@@ -1,0 +1,38 @@
+
+<table>
+    <tr>
+        <td>Enter Product Name </td><td><input type="text" [(ngModel)]="srchkeyword"></td>
+        <td><button class="btn btn-info" (click)="searchByName()">Search</button></td> 
+        <td><button class="btn btn-info" (click)="lowtohigh_()">Sort Low to High</button></td> 
+        <td>      </td>
+        <td><button class="btn btn-info" (click)="hightolow_()">Sort High to low</button></td>
+        <td> <a [routerLink]="['/filter',srchkeyword]" class="btn btn-info">Filter Searched Product</a>
+     </tr>
+</table>
+<table class="table table-bordered">
+<thead>
+    <th>Product</th><th>Product Name</th> <th>Product Price </th> <th>Description</th><th>Quantity</th><th>Action</th>
+</thead>
+<tbody>
+        <tr *ngFor="let v of productArray">
+            <td> <!--<lib-ngx-image-zoom
+                [thumbImage]=v.productimage
+                [fullImage]=v.productimage
+                [magnification]="2"
+                [enableScrollZoom]="true"
+                [enableLens]="true"
+                [lensWidth]="200"
+            ></lib-ngx-image-zoom> -->
+            <img src={{v.productimage}}>
+            </td>
+                <td>{{ v.productname}}</td>
+                <td>{{ v.productprice}}</td>
+                <td>{{ v.productdesc}}</td>
+                <td>{{v.productquantity}}</td>
+                <td> <a href="#" class="btn btn-warning">Add to wishlist</a><br>
+                     <a href="#" class="btn btn-danger">Add to cart </a>
+                </td>
+        </tr>
+</tbody>
+</table>
+

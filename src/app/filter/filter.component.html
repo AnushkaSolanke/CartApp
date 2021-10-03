@@ -1,0 +1,106 @@
+<p>filter works!</p>
+
+<tr>
+    <td>ProductBrand</td><td><select [(ngModel)]="brand">
+            <option value="Wanton">Wanton</option>
+            <option value="Fogg">Fogg</option>
+            <option value="Hrnt">Hrnt</option>
+            <option value="RAYBAN">RAYBAN</option>
+            <option value="Whirlpool">Whirlpool</option>
+            <option value="LG">LG</option>
+            <option value="OnePlus">OnePlus</option>
+            <option value="Bacca Bucci">Bacca Bucci</option>
+            <option value="Adidas NMD R1">Adidas NMD R1</option>
+            <option value="PUMA">PUMA</option>
+            <option value="SUPR">SUPR</option>
+            <option value="Campus">Campus</option>
+            <option value="ASIAN">ASIAN</option>
+            <option value="Louis Carron">Louis Carron</option>
+            <option value="DELL">DELL</option>
+            <option value="OPPO">OPPO</option>
+            <option value="Samsung">Samsung</option>
+            <option value="Vincent">Vincent</option>
+            <option value="APPLE">APPLE</option>
+            <option value="AADI">AADI</option>
+            <option value="SSRNR">SSRNR</option>
+            <option value="Gainx1">Gainx1</option>
+            <option value="Jack Aviator">Jack Aviator</option>
+            <option value="TimeWear">TimeWear</option>
+            <option value="TCL">TCL</option>
+            <option value="Aviator">Aviator</option>
+            <option value="Dervin">Dervin</option>
+            <option value="HP">HP</option>
+            <option value="ZORIK">ZORIK</option>
+            <option value="REALME">REALME</option>
+            <option value="MI">MI</option>
+        </select>
+    </td>
+    <td><button class="btn btn-info" (click)="Apply_Filter()">Apply Filter</button></td>
+    <td>     </td>
+    <td><button class="btn btn-info" (click)="lowtohigh()">Sort Low to High</button></td> 
+    <td>      </td>
+    <td><button class="btn btn-info" (click)="hightolow()">Sort High to low</button></td>
+    <td>Minimum Price</td><td><input type="text" [(ngModel)]="minprice"></td>
+    <td>Maximum Price</td><td><input type="text" [(ngModel)]="maxprice"></td>
+    <td><button class="btn btn-info" (click)="minmaxfilter()">Apply Price Filter</button></td>
+
+</tr>
+<table class="table table-bordered">
+    <thead>
+        <th>Product</th><th>Product Name</th> <th>Product Price </th> <th>Description</th><th>Quantity</th><th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of productArray">
+            <td> <!-- <lib-ngx-image-zoom
+                [thumbImage]=v.productimage
+                [fullImage]=v.productimage
+                [magnification]="2"
+                [enableScrollZoom]="true"
+                [enableLens]="true"
+                [lensWidth]="200"
+            ></lib-ngx-image-zoom> -->
+            <img src={{v.productimage}}>
+            </td>
+            <td>{{ v.productname}}</td>
+            <td>{{ v.productprice}}</td>
+            <td>{{ v.productdesc}}</td>
+            <td>{{v.productquantity}}</td>
+            <td> <a href="#" class="btn btn-warning">Add to wishlist</a><br>
+                 <a href="#" class="btn btn-danger">Add to cart </a>
+            </td>
+    </tr>
+    </tbody>
+    </table>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
